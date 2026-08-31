@@ -23,12 +23,12 @@ def main() -> None:
     now = datetime.now(KST)
     expected_day = target_day_for_month(now.year, now.month)
 
-  #  if now.day != expected_day:
-  #      print(
-  #          f"Today ({now.date()}) is not the target day "
-  #          f"({expected_day} for {now.year}-{now.month:02d}). Skipping."
-  #      )
-  #      return
+    if now.day != expected_day:
+        print(
+            f"Today ({now.date()}) is not the target day "
+            f"({expected_day} for {now.year}-{now.month:02d}). Skipping."
+        )
+        return
 
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
     data = urllib.parse.urlencode({"chat_id": CHAT_ID, "text": MESSAGE}).encode()
