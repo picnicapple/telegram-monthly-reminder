@@ -7,7 +7,7 @@ import urllib.parse
 
 BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
 CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
-MESSAGE = "29일 이과장님 이자납입일"
+MESSAGE = "이자납입일 확인 \n 이율 4.7%, 1억원*0.047/12=391,000원 \n 신한 110-188-653441"
 
 KST = timezone(timedelta(hours=9))
 
